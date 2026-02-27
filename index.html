@@ -2,53 +2,74 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Koo Family Gallery</title>
+<title>Koo Family Memories</title>
 
 <style>
 body {
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   background:#0f1115;
   color:white;
 }
 
 header {
   text-align:center;
-  padding:60px 20px;
+  padding:55px 20px;
+  border-bottom:1px solid #2a2d33;
 }
 
 h1 {
-  font-size:42px;
-  margin-bottom:10px;
+  margin:0;
+  font-size:40px;
+  letter-spacing:-0.5px;
+}
+
+.subtitle {
+  margin-top:10px;
+  color:#9aa0aa;
+  font-size:15px;
 }
 
 .gallery {
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
-  padding:30px;
+  padding:35px;
 }
 
-.card {
+.folder {
   background:#1a1d24;
-  border-radius:14px;
-  overflow:hidden;
+  border:1px solid #2a2d33;
+  border-radius:12px;
+  padding:18px 20px;
   text-decoration:none;
   color:white;
-  transition:transform .25s;
+  transition:all .25s ease;
+  position:relative;
 }
 
-.card:hover {
-  transform:scale(1.03);
+.folder:hover {
+  transform:translateY(-4px);
+  background:#232730;
+  border-color:#3b4048;
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
 }
 
-.card img {
-  width:100%;
+.folder-icon {
+  font-size:26px;
+  margin-bottom:10px;
   display:block;
 }
 
-.card h3 {
-  margin:15px;
+.folder-title {
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.folder-sub {
+  color:#9aa0aa;
+  font-size:14px;
 }
 </style>
 </head>
@@ -57,21 +78,30 @@ h1 {
 
 <header>
   <h1>Koo Family Memories</h1>
-  <p>Private Family Gallery</p>
+  <div class="subtitle">Private family archive</div>
 </header>
 
 <section class="gallery">
 
-<a class="card"
-href="https://www.amazon.com/photos/shared/6nuHsXfwSw2Fy05hwEk1vg.KsaYR8n0ZErfaUhdI2QAaQ"
-target="_blank">
+  <!-- Taiwan Album -->
+  <a class="folder"
+     href="https://www.amazon.com/photos/shared/6nuHsXfwSw2Fy05hwEk1vg.KsaYR8n0ZErfaUhdI2QAaQ"
+     target="_blank">
 
-  <!-- change this image later to your favorite vacation photo -->
-  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200" alt="Family Vacation">
+      <span class="folder-icon">📁</span>
+      <div class="folder-title">2026 Taiwan Vacation</div>
+      <div class="folder-sub">Open album →</div>
 
-  <h3>Family Vacation Album</h3>
+  </a>
 
-</a>
+  <!-- TEMPLATE FOR FUTURE TRIPS -->
+  <!--
+  <a class="folder" href="AMAZON_LINK_HERE" target="_blank">
+      <span class="folder-icon">📁</span>
+      <div class="folder-title">2025 Japan Trip</div>
+      <div class="folder-sub">Open album →</div>
+  </a>
+  -->
 
 </section>
 
